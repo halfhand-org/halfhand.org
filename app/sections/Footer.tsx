@@ -1,0 +1,93 @@
+import { cn } from '@/lib/utils'
+
+const footerLinks = {
+  Product: [
+    { label: 'Documentation', href: '/docs/' },
+    { label: 'CLI Reference', href: '/docs/cli/' },
+    { label: 'Configuration', href: '/docs/config/' },
+  ],
+  Resources: [
+    { label: 'Blog', href: '/blog/' },
+    { label: 'Changelog', href: '/changelog/' },
+    { label: 'Roadmap', href: '/roadmap/' },
+  ],
+  Legal: [
+    { label: 'Privacy', href: '/privacy/' },
+    { label: 'Terms', href: '/terms/' },
+  ],
+}
+
+export function Footer() {
+  return (
+    <footer className="border-t border-border/40 bg-secondary/20 py-12">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Brand */}
+          <div className="sm:col-span-2 lg:col-span-1">
+            <a href="/" className="flex items-center gap-2">
+              <span className="text-xl font-bold tracking-tight text-foreground">
+                hh
+              </span>
+              <span className="text-sm font-medium text-muted-foreground">
+                Halfhand
+              </span>
+            </a>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Local-first observability for AI agents. Replay every action,
+              inspect every decision.
+            </p>
+          </div>
+
+          {/* Links */}
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h3 className="text-sm font-semibold text-foreground tracking-wide uppercase">
+                {category}
+              </h3>
+              <ul className="mt-4 space-y-2.5">
+                {links.map((link) => (
+                  <li key={link.href}>
+                    <a
+                      href={link.href}
+                      className={cn(
+                        'text-sm text-muted-foreground transition-colors hover:text-foreground',
+                        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm'
+                      )}
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-muted-foreground">
+            &copy; {new Date().getFullYear()} Halfhand. Released under MIT
+            License.
+          </p>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/thehalfhand/halfhand"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://twitter.com/thehalfhand"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Twitter
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
