@@ -1,21 +1,21 @@
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils";
 
 const footerLinks = {
   Product: [
-    { label: 'Documentation', href: '/docs/' },
-    { label: 'CLI Reference', href: '/docs/cli/' },
-    { label: 'Configuration', href: '/docs/config/' },
+    { label: "Documentation", href: "/docs/" },
+    { label: "CLI Reference", href: "/docs/cli/" },
+    { label: "Configuration", href: "/docs/config/" },
   ],
   Resources: [
-    { label: 'Blog', href: '/blog/' },
-    { label: 'Changelog', href: '/changelog/' },
-    { label: 'Roadmap', href: '/roadmap/' },
+    { label: "Blog", href: "/blog/" },
+    { label: "Changelog", href: "/changelog/" },
+    { label: "Roadmap", href: "/roadmap/" },
   ],
   Legal: [
-    { label: 'Privacy', href: '/privacy/' },
-    { label: 'Terms', href: '/terms/' },
+    { label: "Privacy", href: "/privacy/" },
+    { label: "Terms", href: "/terms/" },
   ],
-}
+};
 
 export function Footer() {
   return (
@@ -50,8 +50,8 @@ export function Footer() {
                     <a
                       href={link.href}
                       className={cn(
-                        'text-sm text-muted-foreground transition-colors hover:text-foreground',
-                        'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm'
+                        "text-sm text-muted-foreground transition-colors hover:text-foreground",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",
                       )}
                     >
                       {link.label}
@@ -65,12 +65,20 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Halfhand. Released under MIT
-            License.
+            &copy; {new Date().getFullYear()} Halfhand. Released under
+            Apache-2.0 license.
           </p>
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com/thehalfhand/halfhand"
+              href="https://github.com/halfhandorg/halfhand"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+            >
+              View on GitHub
+            </a>
+            <a
+              href="https://github.com/halfhandorg"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
@@ -78,16 +86,16 @@ export function Footer() {
               GitHub
             </a>
             <a
-              href="https://twitter.com/thehalfhand"
+              href="https://x.com/halfhandorg"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-muted-foreground hover:text-foreground transition-colors"
             >
-              Twitter
+              X
             </a>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
