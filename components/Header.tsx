@@ -57,7 +57,7 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <a
-            href="https://github.com/thehalfhand/halfhand"
+            href="https://github.com/halfhandorg"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(

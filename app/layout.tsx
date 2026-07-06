@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     'replay AI agent sessions',
     'Model Context Protocol debugging',
   ],
-  metadataBase: new URL('https://thehalfhand.dev'),
+  metadataBase: new URL('https://halfhand.org'),
   openGraph: {
     title: 'Halfhand — Replay Every Action Your Agents Took',
     description:
       'Halfhand is a local-first developer tool for recording, replaying, and debugging AI agent execution.',
-    url: 'https://thehalfhand.dev',
+    url: 'https://halfhand.org',
     siteName: 'Halfhand',
     type: 'website',
     locale: 'en_US',
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     title: 'Halfhand — Replay Every Action Your Agents Took',
     description:
       'Local-first developer tool for recording, replaying, and debugging AI agent execution.',
-    site: '@thehalfhand',
-    creator: '@thehalfhand',
+    site: '@halfhandorg',
+    creator: '@halfhandorg',
   },
   robots: {
     index: true,
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://thehalfhand.dev',
+    canonical: 'https://halfhand.org',
   },
 }
 

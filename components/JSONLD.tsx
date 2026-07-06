@@ -6,7 +6,7 @@ export function JSONLD() {
     applicationCategory: 'DeveloperApplication',
     operatingSystem: 'Linux, macOS, Windows',
     softwareVersion: '0.1.0',
-    url: 'https://thehalfhand.dev',
+    url: 'https://halfhand.org',
     description:
       'Halfhand is a local-first developer tool for recording, replaying, and debugging AI agent execution. Inspect prompts, tool calls, MCP traffic, file modifications, and execution history through a deterministic replay interface.',
     offers: {
@@ -17,7 +17,7 @@ export function JSONLD() {
     author: {
       '@type': 'Organization',
       name: 'Halfhand',
-      url: 'https://thehalfhand.dev',
+      url: 'https://halfhand.org',
     },
     featureList: [
       'AI agent observability',

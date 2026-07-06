@@ -58,7 +58,7 @@ export function OpenSource() {
 
         <div className="mt-12 text-center">
           <a
-            href="https://github.com/thehalfhand/halfhand"
+            href="https://github.com/halfhandorg/halfhand"
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
