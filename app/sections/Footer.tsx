@@ -2,14 +2,12 @@ import { cn } from "@/lib/utils";
 
 const footerLinks = {
   Product: [
-    { label: "Documentation", href: "/docs/" },
-    { label: "CLI Reference", href: "/docs/cli/" },
-    { label: "Configuration", href: "/docs/config/" },
+    { label: "Documentation", href: "https://docs.halfhand.org", external: true },
+    { label: "CLI Reference", href: "https://docs.rs/halfhand/1.0.0/halfhand/cli/struct.Cli.html", external: true },
+    { label: "Configuration", href: "https://github.com/halfhandorg/halfhand/blob/main/docs/stats.md", external: true },
   ],
   Resources: [
-    { label: "Blog", href: "/blog/" },
-    { label: "Changelog", href: "/changelog/" },
-    { label: "Roadmap", href: "/roadmap/" },
+    { label: "Changelog", href: "https://github.com/halfhandorg/halfhand/blob/main/CHANGELOG.md", external: true },
   ],
   Legal: [
     { label: "Privacy", href: "/privacy/" },
@@ -49,6 +47,8 @@ export function Footer() {
                   <li key={link.href}>
                     <a
                       href={link.href}
+                      target={link.external ? "_blank" : undefined}
+                      rel={link.external ? "noopener noreferrer" : undefined}
                       className={cn(
                         "text-sm text-muted-foreground transition-colors hover:text-foreground",
                         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring rounded-sm",

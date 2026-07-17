@@ -9,7 +9,7 @@ const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'CLI', href: '#cli' },
   { label: 'Open Source', href: '#open-source' },
-  { label: 'Documentation', href: '/docs/' },
+  { label: 'Documentation', href: 'https://docs.halfhand.org', external: true },
 ]
 
 export function Header() {
@@ -55,6 +55,8 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
+              target={link.external ? '_blank' : undefined}
+              rel={link.external ? 'noopener noreferrer' : undefined}
               className={cn(
                 'rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors',
                 'hover:text-foreground hover:bg-secondary',
@@ -112,6 +114,8 @@ export function Header() {
               <a
                 key={link.href}
                 href={link.href}
+                target={link.external ? '_blank' : undefined}
+                rel={link.external ? 'noopener noreferrer' : undefined}
                 className="block rounded-md px-3 py-3 text-base font-medium text-foreground hover:bg-secondary transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
