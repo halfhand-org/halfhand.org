@@ -15,7 +15,7 @@ export function FinalCTA() {
 
         <div className="mt-10 flex flex-col items-center gap-6">
           <a
-            href="https://halfhand.org/install.sh"
+            href="https://crates.io/crates/halfhand"
             className={cn(
               "inline-flex items-center justify-center rounded-lg bg-foreground px-6 py-3.5 text-sm font-semibold text-background transition-colors",
               "hover:bg-foreground/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring",
@@ -27,14 +27,14 @@ export function FinalCTA() {
           <div className="w-full max-w-lg">
             <Terminal
               title="bash"
-              command="$ curl -fsSL https://halfhand.org/install.sh | sh"
+              command="$ cargo install halfhand"
               lines={[]}
             />
           </div>
         </div>
 
         <p className="mt-6 text-sm text-muted-foreground">
-          macOS &middot; Linux &middot; No Rust required &middot;{" "}
+          Requires Rust 1.75+ &middot; macOS, Linux, Windows &middot;{" "}
           <a
             href="https://halfhand.org/install"
             className="underline underline-offset-4 hover:text-foreground transition-colors"
