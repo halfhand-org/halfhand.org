@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 const footerLinks = {
   Product: [
-    { label: "Documentation", href: "https://docs.halfhand.org", external: true },
+    { label: "Documentation", href: "/docs", external: false },
     { label: "CLI Reference", href: "https://docs.rs/halfhand/1.0.0/halfhand/cli/struct.Cli.html", external: true },
     { label: "Configuration", href: "https://github.com/halfhandorg/halfhand/blob/main/docs/stats.md", external: true },
   ],
